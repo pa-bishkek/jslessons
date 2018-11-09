@@ -1,7 +1,7 @@
 function concatStr(str_array) {
     var i = 0;
     var result = "";
-
+    // В цикле while, проходимся по каждому элементу полученного массива(str_array)
     while (i < str_array.length) {
         var div = ""; // division(разделитель)
         // Пробел добавляется только если обрабатываемый элемент имеет индекс больше 0
@@ -9,7 +9,13 @@ function concatStr(str_array) {
             div = " ";
         }
         result = result + div + str_array[i];
-        console.log(result); // Можем вывести промежуточный результат в консоль
+        // Можем вывести промежуточный результат в консоль
+        console.log(
+            "Номер итерации:",
+            i + 1,
+            "Результат к концу итерации:",
+            result
+        );
         // Увеличиваем счетчик
         i++;
     }
@@ -17,6 +23,5 @@ function concatStr(str_array) {
     return result;
 }
 var foo = ["Consectetur", "iste", "ipsum", "voluptatum"];
-// Сконкатенировать строки из массива foo
-var bigString = concatStr(foo);
-console.log(bigString);
+var bigString = concatStr(foo); // Вызываем функцию и ложим результат ее выполнения в переменную bigString
+console.info("Итоговый результат: ", bigString);
