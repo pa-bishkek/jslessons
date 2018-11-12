@@ -23,6 +23,10 @@ function calc(a, b, command) {
             alert("Undefined command!!!");
     }
 }
-
-var result = calc(3, "sdfjlk", "mult");
+//
+var num1 = prompt("Первое число");
+var num2 = prompt("Второе число");
+var cmd = prompt("Command?");
+//
+var result = calc(+num1, +num2, cmd);
 console.log(result);
