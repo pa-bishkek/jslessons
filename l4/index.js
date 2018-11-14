@@ -32,13 +32,23 @@ function createRandomCat() {
     return _cat;
 }
 
-var cat = createRandomCat();
-console.log(cat);
+function getByColor(_cats, color) {
+    //color "green"
+    var result = [];
+    for (var i = 0; i < _cats.length; i++) {
+        var current_cat = _cats[i];
+        if (current_cat.color_eye === color) {
+            result.push(current_cat);
+        }
+    }
+    return result;
+}
 
-//var cats = [];
-//var cat;
-//for (var i = 0; i < 4; i++) {
-//cat = createRandomCat();
-//cats.push(cat);
-//}
-//console.log(cats);
+var cats = [];
+for (var i = 0; i < 1000; i++) {
+    var cat = createRandomCat();
+    cats.push(cat);
+}
+// cats = Array.length = 1000
+var green_eye_cats = getByColor(cats, "green");
+console.log(green_eye_cats);
