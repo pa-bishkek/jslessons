@@ -1,23 +1,22 @@
-html {
-  height: 100%;
-}
 body {
-  min-height: 100%;
-  font-family: 'Ranga', cursive;
+    height: 100vh;
+    font-family: 'Ranga', cursive;
 }
 
 .wall{
-    height: 600px;
     position: relative;
-    background-image: url("./static/images/wall.jpg")
+    height: 100%;
+    background-image: url("./static/images/wall.jpg");
+    background-size: cover;
 }
 
 .date {
     color: #fff;
-    font-size: 40px;
+    font-size: 140px;
     font-family: inherit;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
+    text-shadow: 3px 3px 10px #000;
 }
