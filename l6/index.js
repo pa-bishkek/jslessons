@@ -8,12 +8,6 @@ function get1Header() {
     return h;
 }
 
-function printTimer() {
-    console.log("Hello!");
-}
-
-// 15 days 20 hours 15 munutes 24 seconds
-//
 function leftNY() {
     var now = new Date();
     var ny = new Date(2019, 0);
@@ -39,6 +33,12 @@ function leftNY() {
     );
 }
 
-console.log(leftNY());
+function printTimer() {
+    var h = get1Header();
+    var befo_left = leftNY();
+    h.innerText = befo_left;
+}
+
+console.log(printTimer());
 
 // printTimer();
