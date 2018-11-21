@@ -20,6 +20,8 @@ function leftNY() {
     var minutes_count = Math.floor(delta / MINUTE);
     delta -= minutes_count * MINUTE;
     var seconds_count = Math.floor(delta / SECOND);
+    delta -= seconds_count * SECOND;
+    var mseconds_count = Math.floor(delta);
 
     return (
         days_count +
@@ -29,7 +31,9 @@ function leftNY() {
         minutes_count +
         " minutes " +
         seconds_count +
-        " seconds"
+        " seconds " +
+        mseconds_count +
+        " milliseconds"
     );
 }
 
@@ -37,6 +41,7 @@ function printTimer() {
     var h = get1Header();
     var befo_left = leftNY();
     h.innerText = befo_left;
+    requestAnimationFrame(printTimer);
 }
 
 console.log(printTimer());
