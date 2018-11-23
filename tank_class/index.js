@@ -1,6 +1,6 @@
-function Tank(id) {
-    this.x = 0;
-    this.y = 0;
+function Tank(id, x, y) {
+    this.x = x || 0;
+    this.y = y || 0;
     this.hp = 100;
     this.id = id;
     this.speed = 15;
@@ -37,7 +37,9 @@ Tank.prototype.right = function() {
 };
 
 var t = new Tank("tank1");
-t.__proto__ = Tank.prototype;
+var t2 = new Tank("tank2", 540, 0);
+// t.__proto__ = Tank.prototype;
+console.log(t);
 
 window.onkeydown = function(event) {
     switch (event.code) {
