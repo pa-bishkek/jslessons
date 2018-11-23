@@ -6,7 +6,23 @@ function Tank(id, x, y) {
     this.speed = 15;
     this.el = document.getElementById(id);
     this._changeStyle();
+    this.addListener();
 }
+Tank.selected_tank = null;
+
+Tank.prototype.addListener = function() {
+    this.el.addEventListener(
+        "click",
+        function() {
+            this._select();
+        }.bind(this)
+    );
+    // document.addEventListener()
+};
+
+Tank.prototype._select = function() {
+    Tank.selected_tank = this;
+};
 
 Tank.prototype._printCoords = function() {
     console.log("My position: x:" + this.x + " y:" + this.y);
@@ -42,18 +58,19 @@ var t2 = new Tank("tank2", 540, 0);
 console.log(t);
 
 window.onkeydown = function(event) {
+    if (!Tank.selected_tank) return;
     switch (event.code) {
         case "KeyW":
-            t.up();
+            Tank.selected_tank.up();
             break;
         case "KeyA":
-            t.left();
+            Tank.selected_tank.left();
             break;
         case "KeyD":
-            t.right();
+            Tank.selected_tank.right();
             break;
         case "KeyS":
-            t.down();
+            Tank.selected_tank.down();
             break;
     }
 };
