@@ -3,28 +3,38 @@ function Tank(id) {
     this.y = 0;
     this.hp = 100;
     this.id = id;
+    this.el = document.getElementById(id);
     this._printCoords = function() {
         console.log("My position: x:" + this.x + " y:" + this.y);
     };
+    this._changeStyle = function() {
+        this.el.style.left = this.x + "px";
+        this.el.style.top = this.y + "px";
+    };
     this.up = function() {
         this.y--;
+        this._changeStyle();
         this._printCoords();
     };
     this.down = function() {
         this.y++;
+        this._changeStyle();
         this._printCoords();
     };
     this.left = function() {
         this.x--;
+        this._changeStyle();
         this._printCoords();
     };
     this.right = function() {
         this.x++;
+        this._changeStyle();
         this._printCoords();
     };
+    this._changeStyle();
 }
 
-var t = new Tank();
+var t = new Tank("tank1");
 
 window.onkeydown = function(event) {
     switch (event.code) {
