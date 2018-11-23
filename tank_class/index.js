@@ -3,6 +3,7 @@ function Tank(id) {
     this.y = 0;
     this.hp = 100;
     this.id = id;
+    this.speed = 15;
     this.el = document.getElementById(id);
     this._printCoords = function() {
         console.log("My position: x:" + this.x + " y:" + this.y);
@@ -11,25 +12,25 @@ function Tank(id) {
         this.el.style.left = this.x + "px";
         this.el.style.top = this.y + "px";
     };
+    this._changePosition = function(axis, d) {
+        next = this[axis] + d;
+        if (next >= 0 && next <= 540) {
+            this[axis] = next;
+            this._changeStyle();
+            this._printCoords();
+        }
+    };
     this.up = function() {
-        this.y--;
-        this._changeStyle();
-        this._printCoords();
+        this._changePosition("y", -1);
     };
     this.down = function() {
-        this.y++;
-        this._changeStyle();
-        this._printCoords();
+        this._changePosition("y", 1);
     };
     this.left = function() {
-        this.x--;
-        this._changeStyle();
-        this._printCoords();
+        this._changePosition("x", -1);
     };
     this.right = function() {
-        this.x++;
-        this._changeStyle();
-        this._printCoords();
+        this._changePosition("x", 1);
     };
     this._changeStyle();
 }
