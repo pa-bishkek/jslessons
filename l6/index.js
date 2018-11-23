@@ -31,15 +31,14 @@ function leftNY() {
         minutes_count +
         " minutes " +
         seconds_count +
-        " seconds " +
-        mseconds_count +
-        " milliseconds"
+        " seconds "
     );
 }
 
 function printTimer() {
+    // CamelCase
     var h = get1Header();
-    var befo_left = leftNY();
+    var befo_left = leftNY(); // KebabCase
     h.innerText = befo_left;
     requestAnimationFrame(printTimer);
 }
