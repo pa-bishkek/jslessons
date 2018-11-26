@@ -40,16 +40,16 @@ Tank.prototype._changePosition = function(axis, d) {
     }
 };
 Tank.prototype.up = function() {
-    this._changePosition("y", -1);
+    this._changePosition("y", -this.speed);
 };
 Tank.prototype.down = function() {
-    this._changePosition("y", 1);
+    this._changePosition("y", this.speed);
 };
 Tank.prototype.left = function() {
-    this._changePosition("x", -1);
+    this._changePosition("x", -this.speed);
 };
 Tank.prototype.right = function() {
-    this._changePosition("x", 1);
+    this._changePosition("x", this.speed);
 };
 
 var t = new Tank("tank1");
