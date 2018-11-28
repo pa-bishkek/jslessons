@@ -11,12 +11,9 @@ function Tank(id, x, y) {
 Tank.selected_tank = null;
 
 Tank.prototype.addListener = function() {
-    this.el.addEventListener(
-        "click",
-        function() {
-            this._select();
-        }.bind(this)
-    );
+    this.el.addEventListener("click", function() {
+        this._select();
+    });
     // document.addEventListener()
 };
 
