@@ -19,12 +19,19 @@ function foo(str, cmd) {
                 })
                 .join("");
         case "turn":
-            console.log("turn");
-            break;
+            return str
+                .split("")
+                .map(function(c, idx) {
+                    if (/[a-z]/.test(c)) {
+                        return c.toUpperCase();
+                    }
+                    return c.toLowerCase();
+                })
+                .join("");
         default:
             return str;
     }
 }
 
 var cmd = prompt("Enter a command");
-console.log(foo("abracadabra", cmd));
+console.log(foo("Hello World", cmd));
