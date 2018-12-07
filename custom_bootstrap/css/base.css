@@ -1,0 +1,16 @@
+body{
+    color: #212529
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.container {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+}
