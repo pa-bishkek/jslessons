@@ -1,4 +1,6 @@
 .btn {
+    display: inline-block;
+    cursor: pointer;
     padding: 10px;
     border-radius: 3px;
     border-width: 3px;
@@ -35,30 +37,39 @@
 @keyframes shake {
     0% {
         transform: rotate(0deg) translateX(0);
-        margin-left: 0px;
-        margin-right: 0px;
     }
     25% {
         transform: rotate(25deg) translateX(15px);
-        margin-left: 20px;
-        margin-right: 0px;
     }
     50% {
         transform: rotate(0deg) translateX(0);
-        margin-left: 0px;
-        margin-right: 0px;
     }
     75% {
         transform: rotate(-25deg) translateX(-15px);
-        margin-left: 0px;
-        margin-right: 20px;
     }
     100% {
         transform: rotate(0deg) translateX(0);
-        margin-left: 0px;
-        margin-right: 0px;
     }
 }
+
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(25deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-25deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
 
 .btn.shake {
     position: relative;

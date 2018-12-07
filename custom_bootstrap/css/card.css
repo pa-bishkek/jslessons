@@ -1,0 +1,19 @@
+.card {
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px #eee;
+    width: 200px;
+}
+
+.card .card-header {
+    height: 150px;
+    background-color: #ccc;
+}
+
+.card .card-body {
+    padding: 15px;
+}
+
+.card h1, .card h2, .card h3 {
+    margin-top: 0;
+}
