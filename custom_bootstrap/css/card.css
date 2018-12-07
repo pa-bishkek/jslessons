@@ -2,7 +2,11 @@
     border-radius: 3px;
     border: 1px solid #ccc;
     box-shadow: 0 0 10px #eee;
-    width: 200px;
+    min-width: 200px;
+}
+
+.container.cards-list {
+    justify-content: space-between;
 }
 
 .card .card-header {
