@@ -1,21 +1,23 @@
 .table {
     border-collapse: collapse;
+    width: 100%;
 }
 
 .table th, .table td {
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #cae495;
     padding: .5em;
     text-align: center;
+    color: #588202;
 }
 
 .table tbody tr{
-    background-color: #eee;
+    background-color: #e8f5d0;
 }
 .table tbody tr:nth-child(2n) {
-    background-color: #ddd;
+    background-color: #dbecb7;
 }
 .table tbody tr:last-child th, .table tbody tr:last-child td {
-    border-top: 5px solid #bbb;
+    border-top: 3px solid #cae495;
 }
 
 @font-face  {}

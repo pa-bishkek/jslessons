@@ -32,6 +32,10 @@ a:hover {
     align-items: center;
 }
 
+.row {
+    width: 100%;
+}
+
 .container.column{
     flex-direction: column;
 }

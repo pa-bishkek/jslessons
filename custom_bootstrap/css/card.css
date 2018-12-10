@@ -1,24 +1,30 @@
+.container .cards-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 .card {
     border-radius: 3px;
     border: 1px solid #ccc;
     box-shadow: 0 0 10px #eee;
-    min-width: 200px;
-    flex-basis: 33%;
-}
-
-.container.cards-list {
-    justify-content: space-between;
+    display: flex;
+    flex-basis: calc(33% - 20px);
+    flex-direction: column;
+    flex-grow: 1;
+    margin: 10px;
 }
 
 .card .card-image {
-    height: 150px;
     background-color: #ccc;
+    height: 150px;
 }
 
 .card .card-body {
+    flex-grow: 1;
     padding: 15px;
 }
-<></sdkfj>
+
 .card .card-header {
     padding: 15px;
     border-bottom: 1px solid #ccc;

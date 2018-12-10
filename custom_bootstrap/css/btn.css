@@ -30,7 +30,7 @@
 .btn-group {
     border-radius: 3px;
     overflow: hidden;
-    display: flex;
+    display: inline-flex;
     align-items: stretch;
 }
 
@@ -89,8 +89,4 @@
     animation-duration: 1s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-}
-
-.btn.shake:hover {
-    animation-play-state: paused;
 }
