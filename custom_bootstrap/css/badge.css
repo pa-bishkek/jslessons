@@ -23,19 +23,19 @@
 }
 
 .badge-sale:after {
-    content: "Sale!";
-    font-size: .7em;
-    color: #fff;
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: #2679c1;
-    padding: .75em;
-    transform: translateX(50%) translateY(-50%);
-
-    animation-name: blink;
     animation-duration: 1s;
     animation-iteration-count: infinite;
+    animation-name: blink;
+    background-color: #2679c1;
+    color: #fff;
+    content: "Sale!";
+    font-size: .7em;
+    padding: .75em;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateX(50%) translateY(-50%);
+    z-index: 1;
 }
 
 
