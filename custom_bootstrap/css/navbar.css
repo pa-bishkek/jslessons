@@ -13,3 +13,11 @@
     font-size: 1.4rem;
 }
 
+.navbar .nav .nav-item a {
+    color: #ddd;
+    padding: .5rem .4rem;
+}
+
+.navbar .nav .nav-item a:hover {
+    color: #fff;
+}

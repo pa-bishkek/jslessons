@@ -1,7 +1,13 @@
 .nav {
     display: flex;
+    align-items: center;
 }
 
 .nav .nav-item {
     list-style: none;
+}
+
+.nav .nav-item a {
+    display: inline-block;
+    padding: .5rem 1rem;
 }
