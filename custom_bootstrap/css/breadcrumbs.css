@@ -1,11 +1,20 @@
 .breadcrumbs {
+    background-color: #e9ecef;
+    padding: 0.25em 0.35em;
+    list-style: none;
+    display: flex;
+    font-size: 1.25em;
+    border-radius: 3px;
 }
 
 .breadcrumbs .breadcrumbs-item {
+
 }
 
 .breadcrumbs .breadcrumbs-item:after {
-    content: "";
+    content: "/";
+    color: #aaa;
+    margin: 0 10px;
 }
 
 .breadcrumbs .breadcrumbs-item:last-child:after {
@@ -13,5 +22,6 @@
 }
 
 
-.breadcrumbs .breadcrumbs-item .active {
+.breadcrumbs .breadcrumbs-item.active {
+    color: #aaa;
 }
