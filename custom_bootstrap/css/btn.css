@@ -1,13 +1,42 @@
 .btn {
-    display: inline-block;
-    cursor: pointer;
-    padding: 10px;
     border-radius: 3px;
-    border-width: 3px;
     border-style: solid;
-    transition-property: background-color, border-color;
+    border-width: 1px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1rem;
+    padding: 0.75em;
     transition-duration: 0.2s;
+    transition-property: background-color, border-color;
     transition-timing-function: linear;
+}
+
+.btn.sm {
+    font-size: 0.75rem;
+}
+
+.btn.md {
+}
+
+.btn.lg {
+    font-size: 1.25rem;
+}
+
+.btn.btn-block {
+    display: block;
+    text-align: center;
+}
+
+.btn-group {
+    border-radius: 3px;
+    overflow: hidden;
+    display: flex;
+    align-items: stretch;
+}
+
+.btn-group .btn {
+    border-radius: 0px;
+    border-width: 0;
 }
 
 .btn.primary {
@@ -36,34 +65,16 @@
 
 @keyframes shake {
     0% {
-        transform: rotate(0deg) translateX(0);
-    }
-    25% {
-        transform: rotate(25deg) translateX(15px);
-    }
-    50% {
-        transform: rotate(0deg) translateX(0);
-    }
-    75% {
-        transform: rotate(-25deg) translateX(-15px);
-    }
-    100% {
-        transform: rotate(0deg) translateX(0);
-    }
-}
-
-@keyframes shake {
-    0% {
         transform: rotate(0deg);
     }
     25% {
-        transform: rotate(25deg);
+        transform: rotate(10deg);
     }
     50% {
         transform: rotate(0deg);
     }
     75% {
-        transform: rotate(-25deg);
+        transform: rotate(-10deg);
     }
     100% {
         transform: rotate(0deg);

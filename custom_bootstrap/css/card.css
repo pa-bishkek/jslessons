@@ -3,19 +3,30 @@
     border: 1px solid #ccc;
     box-shadow: 0 0 10px #eee;
     min-width: 200px;
+    flex-basis: 33%;
 }
 
 .container.cards-list {
     justify-content: space-between;
 }
 
-.card .card-header {
+.card .card-image {
     height: 150px;
     background-color: #ccc;
 }
 
 .card .card-body {
     padding: 15px;
+}
+<></sdkfj>
+.card .card-header {
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.card .card-footer {
+    padding: 15px;
+    border-top: 1px solid #ccc;
 }
 
 .card h1, .card h2, .card h3 {
