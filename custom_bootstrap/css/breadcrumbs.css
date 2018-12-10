@@ -1,0 +1,17 @@
+.breadcrumbs {
+}
+
+.breadcrumbs .breadcrumbs-item {
+}
+
+.breadcrumbs .breadcrumbs-item:after {
+    content: "";
+}
+
+.breadcrumbs .breadcrumbs-item:last-child:after {
+    content: none;
+}
+
+
+.breadcrumbs .breadcrumbs-item .active {
+}

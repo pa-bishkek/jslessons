@@ -21,3 +21,8 @@
 .navbar .nav .nav-item a:hover {
     color: #fff;
 }
+
+.navbar .nav .nav-item a.active {
+    cursor: default;
+    color: #fff;
+}
