@@ -1,0 +1,15 @@
+.navbar {
+    padding: .4rem 1rem;
+    background: #292C30;
+}
+
+.navbar .container {
+    padding: 0;
+    justify-content: space-between;
+}
+
+.navbar .navbar-brand {
+    color: #fff;
+    font-size: 1.4rem;
+}
+
