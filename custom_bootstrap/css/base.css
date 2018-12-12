@@ -30,19 +30,6 @@ a.active {
 }
 
 
-.container {
-    width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 15px 0;
-}
-
-.row {
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
-
 .container.column{
     flex-direction: column;
 }

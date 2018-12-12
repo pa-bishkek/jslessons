@@ -11,9 +11,7 @@
     box-shadow: 0 0 10px #eee;
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
     margin-bottom: 10px;
-    max-width: calc(33% - 5px);
 }
 
 .card .card-image {

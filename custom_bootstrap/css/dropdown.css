@@ -2,7 +2,7 @@
     position: relative;
 }
 
-.dropdown:hover .dropdown-menu {
+.dropdown:hover > .dropdown-menu {
     display: block;
     animation-name: bounceIn;
     animation-duration: 1s;
