@@ -6,7 +6,7 @@
 }
 
 .card {
-border-radius: 3px;
+    border-radius: 3px;
     border: 1px solid #ccc;
     box-shadow: 0 0 10px #eee;
     display: flex;

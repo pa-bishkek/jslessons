@@ -9,9 +9,7 @@
     width: 100%;
 }
 
-.breadcrumbs .breadcrumbs-item {
-
-}
+.breadcrumbs .breadcrumbs-item {}
 
 .breadcrumbs .breadcrumbs-item:after {
     content: "/";
