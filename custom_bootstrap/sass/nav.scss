@@ -2,13 +2,11 @@
     display: flex;
     align-items: center;
     margin: 0;
-}
-
-.nav .nav-item {
-    list-style: none;
-}
-
-.nav .nav-item a {
-    display: inline-block;
-    padding: .5rem 1rem;
+    .nav-item {
+        list-style: none;
+        a {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+        }
+    }
 }

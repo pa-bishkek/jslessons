@@ -1,4 +1,5 @@
 @font-face {
-    font-family: 'Test';
+    font-family: Ubuntu;
     src: url("/fonts/ubuntu.ttf") format("truetype");
 }
+$font-ubuntu: Ubuntu, sans-serif;

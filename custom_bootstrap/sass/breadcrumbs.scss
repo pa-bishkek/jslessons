@@ -1,27 +1,25 @@
 .breadcrumbs {
-    background-color: #e9ecef;
-    border-radius: 3px;
+    background-color: $lgrey;
+    border-radius: $base_border_radius;
     display: flex;
     font-size: 1.25em;
     list-style: none;
     margin-bottom: 0;
     padding: 0.25em 0.35em;
     width: 100%;
-}
-
-.breadcrumbs .breadcrumbs-item {}
-
-.breadcrumbs .breadcrumbs-item:after {
-    content: "/";
-    color: #aaa;
-    margin: 0 10px;
-}
-
-.breadcrumbs .breadcrumbs-item:last-child:after {
-    content: none;
-}
-
-
-.breadcrumbs .breadcrumbs-item.active {
-    color: #aaa;
+    .breadcrumbs-item {
+        &:after {
+            content: "/";
+            color: $grey;
+            margin: 0 10px;
+        }
+        &:last-child {
+            &:after {
+                display: none;
+            }
+        }
+        &.active {
+            color: $grey;
+        }
+    }
 }

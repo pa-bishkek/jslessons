@@ -1,28 +1,29 @@
 .table {
     border-collapse: collapse;
     width: 100%;
+    th,
+    td {
+        border-top: 1px solid lighten($success, 50%);
+        padding: 0.5em;
+        text-align: center;
+        color: $success;
+    }
+    tbody {
+        tr {
+            transition: all 0.3s ease;
+            background-color: lighten($success, 60%);
+            &:nth-child(2n) {
+                background-color: lighten($success, 56%);
+            }
+            &.total {
+                th,
+                td {
+                    border-top: 3px solid lighten($success, 50%);
+                }
+            }
+            &:hover {
+                background-color: lighten($success, 50%);
+            }
+        }
+    }
 }
-
-.table th, .table td {
-    border-top: 1px solid #cae495;
-    padding: .5em;
-    text-align: center;
-    color: #588202;
-}
-
-.table tbody tr{
-    transition: all .3s ease;
-    background-color: #e8f5d0;
-}
-.table tbody tr:nth-child(2n) {
-    background-color: #dbecb7;
-}
-.table tbody tr:last-child th, .table tbody tr:last-child td {
-    border-top: 3px solid #cae495;
-}
-
-.table.table-hover tbody tr:hover{
-    background-color: #c6db99;
-}
-
-@font-face  {}

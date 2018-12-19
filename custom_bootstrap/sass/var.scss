@@ -1,7 +1,17 @@
- $dgrey: #292C30;
- $lgrey: #606A72;
- $primary: #007bff;
- $success: #039F3D;
- $danger: #DE233D;
- $warning: #FFB814;
- $text: #212529;
+$dgrey: #292c30;
+$grey: #606a72;
+$lgrey: #ccc;
+$primary: #007bff;
+$secondary: $grey;
+$success: #177c40;
+$danger: #f15f73;
+$warning: #ffb814;
+$info: #17a2b8;
+$text: #212529;
+$white: #fff;
+
+$base_box_shadow: 0 0 10px $lgrey;
+
+$column_count: 12;
+
+$base_border_radius: 3px;

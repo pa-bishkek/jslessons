@@ -1,43 +1,55 @@
-.container .cards-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: stretch;
+.container {
+    .cards-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: stretch;
+    }
 }
 
 .card {
-    border-radius: 3px;
+    border-radius: $base_border_radius;
     border: 1px solid #ccc;
-    box-shadow: 0 0 10px #eee;
+    box-shadow: $base_box_shadow;
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
-}
 
-.card .card-image {
-    background-color: #ccc;
-    height: 150px;
-}
+    .card-image {
+        background-color: $lgrey;
+        height: 150px;
+    }
 
-.card .card-body {
-    flex-grow: 1;
-    padding: 15px;
-}
+    .card-header {
+        padding: 10px;
+        border-bottom: 1px solid $lgrey;
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0;
+            &.bold {
+                font-weight: 600;
+            }
+        }
+    }
+    .card-body {
+        flex-grow: 1;
+        padding: 15px;
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-top: 0;
+        }
+    }
 
-.card .card-header {
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-}
-
-.card .card-header h2 {
-    margin: 0;
-}
-
-.card .card-footer {
-    padding: 15px;
-    border-top: 1px solid #ccc;
-}
-
-.card h1, .card h2, .card h3 {
-    margin-top: 0;
+    .card-footer {
+        padding: 15px;
+        border-top: 1px solid $lgrey;
+    }
 }

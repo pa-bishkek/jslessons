@@ -1,31 +1,30 @@
 .navbar {
-    padding: .4rem 1rem;
-    background: #292C30;
-}
-
-.navbar .container {
-    padding: 0;
-    justify-content: space-between;
-}
-.navbar .container .row {
-    justify-content: space-between;
-}
-
-.navbar .navbar-brand {
-    color: #fff;
-    font-size: 1.4rem;
-}
-
-.navbar .nav .nav-item a {
-    color: #ddd;
-    padding: .5rem .4rem;
-}
-
-.navbar .nav .nav-item a:hover {
-    color: #fff;
-}
-
-.navbar .nav .nav-item a.active {
-    cursor: default;
-    color: #fff;
+    padding: 0.4rem 1rem;
+    background: $dgrey;
+    .container {
+        padding: 0;
+        justify-content: space-between;
+        .row {
+            justify-content: space-between;
+        }
+    }
+    .navbar-brand {
+        color: $white;
+        font-size: 1.4rem;
+    }
+    .nav {
+        .nav-item {
+            & > a {
+                color: $lgrey;
+                padding: 0.5rem 0.4rem;
+                &:hover {
+                    color: $white;
+                }
+                &.active {
+                    cursor: default;
+                    color: $white;
+                }
+            }
+        }
+    }
 }

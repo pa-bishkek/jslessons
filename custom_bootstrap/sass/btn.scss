@@ -1,5 +1,18 @@
+@mixin btn_color($color_name, $color, $font_color) {
+    &.#{$color_name} {
+        background-color: $color;
+        border-color: darken($color, 5%);
+        color: $font_color;
+        &:hover {
+            background-color: darken($color, 5%);
+            border-color: darken($color, 10%);
+            border-style: solid;
+        }
+    }
+}
+
 .btn {
-    border-radius: 3px;
+    border-radius: $base_border_radius;
     border-style: solid;
     border-width: 1px;
     cursor: pointer;
@@ -9,84 +22,41 @@
     transition-duration: 0.2s;
     transition-property: background-color, border-color;
     transition-timing-function: linear;
-}
-
-.btn.sm {
-    font-size: 0.75rem;
-}
-
-.btn.md {
-}
-
-.btn.lg {
-    font-size: 1.25rem;
-}
-
-.btn.btn-block {
-    display: block;
     text-align: center;
+    &.sm {
+        font-size: 0.75rem;
+    }
+    &.md {
+    }
+    &.lg {
+        font-size: 1.25rem;
+    }
+    &.btn-block {
+        display: block;
+    }
+    &.shake {
+        position: relative;
+        display: inline-block;
+        animation-name: shake;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    @include btn_color("primary", $primary, $white);
+    @include btn_color("secondary", $secondary, $white);
+    @include btn_color("success", $success, $white);
+    @include btn_color("danger", $danger, $white);
+    @include btn_color("warning", $warning, $text);
+    @include btn_color("info", $info, $white);
 }
 
 .btn-group {
-    border-radius: 3px;
+    border-radius: $base_border_radius;
     overflow: hidden;
     display: inline-flex;
     align-items: stretch;
-}
-
-.btn-group .btn {
-    border-radius: 0px;
-    border-width: 0;
-}
-
-.btn.primary {
-    background-color: #007bff;
-    border-color: #056edf;
-    color: #fff;
-}
-
-.btn.primary:hover {
-    background-color: #066ad4;
-    border-color: #0555aa;
-    border-style: solid;
-}
-
-.btn.warning {
-    color: #fff;
-    background-color: #FFB814;
-    border-color: #FFB814;
-}
-
-.btn.warning:hover {
-    color: #fff;
-    background-color: #db9d0d;
-    border-color: #b2800a;
-}
-
-@keyframes shake {
-    0% {
-        transform: rotate(0deg);
+    .btn {
+        border-radius: 0;
+        border-width: 0;
     }
-    25% {
-        transform: rotate(10deg);
-    }
-    50% {
-        transform: rotate(0deg);
-    }
-    75% {
-        transform: rotate(-10deg);
-    }
-    100% {
-        transform: rotate(0deg);
-    }
-}
-
-
-.btn.shake {
-    position: relative;
-    display: inline-block;
-    animation-name: shake;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
 }
