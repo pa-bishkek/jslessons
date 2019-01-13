@@ -42,12 +42,10 @@
         animation-timing-function: linear;
         animation-iteration-count: infinite;
     }
-    @include btn_color("primary", $primary, $white);
-    @include btn_color("secondary", $secondary, $white);
-    @include btn_color("success", $success, $white);
-    @include btn_color("danger", $danger, $white);
-    @include btn_color("warning", $warning, $text);
-    @include btn_color("info", $info, $white);
+
+    @each $name, $color in $themes {
+        @include btn_color($name, $color, $white);
+    }
 }
 
 .btn-group {

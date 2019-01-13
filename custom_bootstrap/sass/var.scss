@@ -15,3 +15,19 @@ $base_box_shadow: 0 0 10px $lgrey;
 $column_count: 12;
 
 $base_border_radius: 3px;
+
+$themes: (
+    "primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "info": $info,
+    "warning": $warning,
+    "danger": $danger
+);
+
+$brakepoints: (
+    "sm": 576px,
+    "md": 768px,
+    "lg": 992px,
+    "xl": 1200px
+);

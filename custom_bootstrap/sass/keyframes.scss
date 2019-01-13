@@ -60,3 +60,16 @@
         transform: rotate(0deg);
     }
 }
+
+
+@keyframes blink {
+    0% {
+        opacity: 1
+    }
+    50% {
+        opacity: .7
+    }
+    100% {
+        opacity: 1
+    }
+}
