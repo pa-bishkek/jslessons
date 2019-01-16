@@ -1,0 +1,35 @@
+$aqua: #7FDBFF;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none
+}
+
+.header {
+    height:50px;
+    background-color: #eee;
+}
+
+.container {
+    margin: 0 auto;
+    display: flex;
+    .sidebar {
+        width: 30%;
+        height: 100%;
+        position: absolute;
+        transition: all .3s ease;
+        transform: translateX(-100%);
+        background-color: $aqua;
+        &.open {
+            transform: translateX(0%);
+        }
+    }
+    .content {
+        background-color: lighten($aqua, 10%);
+    }
+}
