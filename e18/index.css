@@ -1,7 +1,22 @@
 .anim {
     animation-name: swing;
     animation-duration: 1s;
-    animation-iteration-count: 10;
+    animation-iteration-count: 2;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ccc;
+    padding: 10px;
+    position: relative;
+    width: 100px;
+}
+
+.btn > span {
+    display: block;
+    position: absolute;
+    bottom: -30px;
+    right: -60px;
 }
 
 @keyframes swing {
